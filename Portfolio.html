@@ -60,18 +60,23 @@
     ul {
       padding-left: 20px;
     }
+    /* Flexbox for profile image + introduction */
+    .about-flex {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
     .profile-img {
-      display: block;
-      max-width: 180px;
+      max-width: 150px;
       height: auto;
       border-radius: 16px;
-      margin-top: 16px;
-      margin-bottom: 16px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.10);
       object-fit: cover;
     }
-    p{
-      text-align: center;
+    .about-desc {
+      flex: 1 1 250px;
+      min-width: 220px;
     }
     .edu-table {
       width: 100%;
@@ -112,8 +117,13 @@
       h1 {
         font-size: 2em;
       }
+      .about-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
       .profile-img {
-        max-width: 120px;
+        max-width: 100px;
       }
     }
   </style>
@@ -135,10 +145,14 @@
 <main>
   <section id="bio">
     <h2>About Me</h2>
-    <img src="Rittik.jpg" alt="Rittik Chatterjee" class="profile-img" />
-    <p>
-      I am a Diploma student at Acharyya Prafulla Chandra Ray Polytechnic in Computer Science & Technology. I am a good listener, a team player, and love to communicate and learn new things. My objective is to be a part of an organization where I can use my knowledge for the growth of both the company and myself.
-    </p>
+    <div class="about-flex">
+      <img src="Rittik.jpg" alt="Rittik Chatterjee" class="profile-img" />
+      <div class="about-desc">
+        <p>
+          I am a Diploma student at Acharyya Prafulla Chandra Ray Polytechnic in Computer Science & Technology. I am a good listener, a team player, and love to communicate and learn new things. My objective is to be a part of an organization where I can use my knowledge for the growth of both the company and myself.
+        </p>
+      </div>
+    </div>
   </section>
 
   <section id="education">
@@ -231,6 +245,3 @@
 
 </body>
 </html>
-
-
-
