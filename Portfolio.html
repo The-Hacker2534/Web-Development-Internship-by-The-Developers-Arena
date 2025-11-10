@@ -61,22 +61,23 @@
       padding-left: 20px;
     }
     /* Flexbox for profile image + introduction */
-    .about-flex {
+    .about-row {
       display: flex;
       align-items: center;
-      gap: 30px;
-      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 24px;
     }
     .profile-img {
-      max-width: 150px;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      width: 130px;
+      height: 160px;
       object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      flex-shrink: 0;
     }
     .about-desc {
-      flex: 1 1 250px;
-      min-width: 220px;
+      flex: 1;
+      min-width: 180px;
     }
     .edu-table {
       width: 100%;
@@ -110,20 +111,21 @@
     form button:hover {
       background: #0056b3;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
+      .about-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .profile-img {
+        width: 100px;
+        height: 120px;
+      }
       main {
         padding: 15px;
       }
       h1 {
         font-size: 2em;
-      }
-      .about-flex {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-      }
-      .profile-img {
-        max-width: 100px;
       }
     }
   </style>
@@ -145,7 +147,7 @@
 <main>
   <section id="bio">
     <h2>About Me</h2>
-    <div class="about-flex">
+    <div class="about-row">
       <img src="Rittik.jpg" alt="Rittik Chatterjee" class="profile-img" />
       <div class="about-desc">
         <p>
