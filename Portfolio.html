@@ -60,16 +60,17 @@
     ul {
       padding-left: 20px;
     }
-    /* Flexbox for profile image + introduction */
+    /* Flexbox for profile image + introduction - always row */
     .about-row {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 18px;
       margin-bottom: 24px;
+      /* Forces row layout always—even on mobile */
     }
     .profile-img {
-      width: 130px;
-      height: 160px;
+      width: 90px;
+      height: 110px;
       object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.10);
@@ -77,7 +78,17 @@
     }
     .about-desc {
       flex: 1;
-      min-width: 180px;
+      min-width: 120px;
+      font-size: 1em;
+    }
+    /* Just shrink font a bit on very small screens */
+    @media (max-width: 400px) {
+      h2 {
+        font-size: 1.2em;
+      }
+      .about-desc {
+        font-size: 0.95em;
+      }
     }
     .edu-table {
       width: 100%;
@@ -111,23 +122,6 @@
     form button:hover {
       background: #0056b3;
     }
-    @media (max-width: 700px) {
-      .about-row {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-      }
-      .profile-img {
-        width: 100px;
-        height: 120px;
-      }
-      main {
-        padding: 15px;
-      }
-      h1 {
-        font-size: 2em;
-      }
-    }
   </style>
 </head>
 <body>
@@ -148,7 +142,7 @@
   <section id="bio">
     <h2>About Me</h2>
     <div class="about-row">
-      <img src="Rittik.jpg" alt="Rittik Chatterjee" class="profile-img" />
+      <img src="1000010513.jpg" alt="Rittik Chatterjee" class="profile-img" />
       <div class="about-desc">
         <p>
           I am a Diploma student at Acharyya Prafulla Chandra Ray Polytechnic in Computer Science & Technology. I am a good listener, a team player, and love to communicate and learn new things. My objective is to be a part of an organization where I can use my knowledge for the growth of both the company and myself.
@@ -156,7 +150,6 @@
       </div>
     </div>
   </section>
-
   <section id="education">
     <h2>Education</h2>
     <table class="edu-table">
@@ -195,7 +188,6 @@
       <li>1st Sem: GPA 8.5 / 82.4%</li>
     </ul>
   </section>
-
   <section id="skills">
     <h2>Skills</h2>
     <ul>
@@ -219,23 +211,20 @@
       <li>Playing Card Games</li>
     </ul>
   </section>
-
   <section id="contact">
     <h2>Contact Me</h2>
     <p>
       Email: <a href="mailto:rittikchatterjee2503@gmail.com">rittikchatterjee2503@gmail.com</a><br>
       Phone: +91 9382296003<br>
+      Address: Taltore, Jamuria, Asansol, Paschim Bardhaman
     </p>
     <form action="https://formsubmit.co/rittikchatterjee2503@gmail.com" method="POST">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required />
-
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" required />
-
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="4" required></textarea>
-
       <button type="submit">Send</button>
     </form>
   </section>
@@ -247,3 +236,4 @@
 
 </body>
 </html>
+
