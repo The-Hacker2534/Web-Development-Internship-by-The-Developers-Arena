@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rittik Chatterjee - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* Color Scheme */
+    :root {
+      --primary: #1565c0;
+      --accent: #ffb300;
+      --background: #f8f9fa;
+      --card-bg: #fff;
+      --border: #e0e0e0;
+      --header-bg: #1a237e;
+      --footer-bg: #263238;
+      --btn-bg: #1565c0;
+      --btn-hover-bg: #003c8f;
+      --btn-text: #fff;
+      --link-hover: #e65100;
+    }
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--background);
+      color: #2d2d2d;
+    }
+    header, footer {
+      background: var(--header-bg);
+      color: #fff;
+      padding: 22px 24px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(44,62,80,0.08);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-top: 16px;
+    }
+    nav li {
+      display: inline;
+      margin-right: 18px;
+    }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      font-family: 'Montserrat', Arial, sans-serif;
+      transition: color 0.2s;
+      font-size: 1.07em;
+      border-bottom: 2.5px solid transparent;
+      padding-bottom: 3px;
+    }
+    nav a:hover {
+      color: var(--link-hover);
+      border-bottom: 2.5px solid var(--accent);
+    }
+    main {
+      max-width: 900px;
+      margin: 38px auto 38px auto;
+      background: var(--card-bg);
+      padding: 38px 32px;
+      border-radius: 13px;
+      box-shadow: 0 8px 32px rgba(44,62,80,0.11);
+      border: 1.5px solid var(--border);
+      font-size: 1.06em;
+    }
+    section {
+      margin-bottom: 36px;
+      padding-bottom: 12px;
+      border-bottom: 1.5px dashed var(--border);
+    }
+    section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    h1, h2 {
+      margin-bottom: 11px;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    h1 {
+      font-size: 2.8em;
+      margin-top: 0;
+      letter-spacing: 1px;
+    }
+    h2 {
+      color: var(--primary);
+      font-size: 1.47em;
+      border-left: 6px solid var(--accent);
+      padding-left: 12px;
+      background: linear-gradient(to right, #ffe082 20%, transparent 80%);
+      border-radius: 3px;
+    }
+    ul {
+      padding-left: 22px;
+      margin-bottom: 8px;
+    }
+    /* Flexbox for profile image + introduction - always row */
+    .about-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 26px;
+      margin-bottom: 24px;
+      margin-top: 2px;
+    }
+    .profile-img {
+      width: 110px;
+      height: 135px;
+      object-fit: cover;
+      border-radius: 19px;
+      box-shadow: 0 2px 10px rgba(44,62,80,0.16);
+      flex-shrink: 0;
+      border: 4px solid var(--accent);
+      transition: border-color 0.2s;
+    }
+    .profile-img:hover {
+      border-color: var(--primary);
+      box-shadow: 0 4px 16px rgba(21,101,192,0.13);
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .about-desc {
+      flex: 1;
+      min-width: 150px;
+      font-size: 1.08em;
+      line-height: 1.61em;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    .headline {
+      color: var(--primary);
+      font-size: 1.15em;
+      margin-bottom: 12px;
+      font-weight: 600;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #e3f2fd;
+      padding: 8px 16px;
+      border-radius: 7px;
+      display: inline-block;
+      margin-left: 3px;
+    }
+    .edu-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 22px;
+      background: #f5f7fa;
+      border-radius: 9px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(44,62,80,0.03);
+    }
+    .edu-table th, .edu-table td {
+      border: 1px solid var(--border);
+      padding: 11px 10px;
+      text-align: left;
+      font-size: 1em;
+    }
+    .edu-table th {
+      background: #bbdefb;
+      color: var(--header-bg);
+      font-weight: 700;
+    }
+    .edu-table td {
+      background: #ffffff;
+    }
+    a {
+      color: var(--primary);
+      word-break: break-all;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: var(--accent);
+    }
+    .linkedin-icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 7px;
+      width: 22px; height:22px;
+    }
+    @media (max-width: 700px) {
+      main {
+        padding: 18px 6px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      .about-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+      }
+      .profile-img {
+        width: 75px;
+        height: 92px;
+      }
+    }
+    footer {
+      background: var(--footer-bg);
+      margin-top: 24px;
+      font-size: 1em;
+      padding: 16px;
+      letter-spacing: .01em;
+      border-top: 2px solid #bdbdbd;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Rittik Chatterjee</h1>
+  <nav>
+    <ul>
+      <li><a href="#bio">Bio</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="bio">
+    <h2>About Me</h2>
+    <div class="headline">
+      Diploma Engineer Trainee at SMS Group India | Human-Machine Interface and Generative AI Applications | Advancing Industrial Automation
+    </div>
+    <div class="about-row">
+      <img src="Rittik.jpg" alt="Rittik Chatterjee" class="profile-img" />
+      <div class="about-desc">
+        <p>
+          I am an aspiring web developer and currently a Diploma Engineer Trainee at SMS Group India, specializing in Human-Machine Interface (HMI) and Generative AI applications for industrial automation. I am passionate about technology, team collaboration, and lifelong learning. My objective is to continually advance my skills and contribute meaningfully to organizations and projects focused on digital transformation and innovative solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="education">
+    <h2>Education</h2>
+    <table class="edu-table">
+      <tr>
+        <th>Course</th>
+        <th>Institution</th>
+        <th>Year</th>
+        <th>Percentage / GPA</th>
+      </tr>
+      <tr>
+        <td>Diploma in Computer Science & Technology</td>
+        <td>Acharyya Prafulla Chandra Ray Polytechnic</td>
+        <td>2022-2025</td>
+        <td>GPA 8.8 / 84.2% (Distinction)</td>
+      </tr>
+      <tr>
+        <td>Class XII (WBCHSE)</td>
+        <td>Asansol Old Station High School</td>
+        <td>2019-2021</td>
+        <td>90.6%</td>
+      </tr>
+      <tr>
+        <td>Class X (WBBSE)</td>
+        <td>Boringdanga High School</td>
+        <td>2013-2019</td>
+        <td>91%</td>
+      </tr>
+    </table>
+    <strong>Semesterwise Results:</strong>
+    <ul>
+      <li>6th Sem: GPA 8.7 / 82.7%</li>
+      <li>5th Sem: GPA 9.5 / 89.7%</li>
+      <li>4th Sem: GPA 8.6 / 80.7%</li>
+      <li>3rd Sem: GPA 8.4 / 80.3%</li>
+      <li>2nd Sem: GPA 9.2 / 87.0%</li>
+      <li>1st Sem: GPA 8.5 / 82.4%</li>
+    </ul>
+  </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Human-Machine Interface (HMI) development</li>
+      <li>Generative AI applications</li>
+      <li>Decent knowledge of C programming</li>
+      <li>Basic concepts of Data Structures</li>
+      <li>Team management and collaboration</li>
+      <li>Good communication and listening</li>
+      <li>Languages: Bengali (native), Hindi, English</li>
+      <li>Industrial Automation Technology</li>
+    </ul>
+    <h3>Positive Skills</h3>
+    <ul>
+      <li>Can adapt in any situation</li>
+      <li>Easily communicate with others</li>
+      <li>Team management skills</li>
+    </ul>
+    <h3>Hobbies</h3>
+    <ul>
+      <li>Writing Poems</li>
+      <li>Reading Books</li>
+      <li>Playing Cricket</li>
+      <li>Playing Card Games</li>
+    </ul>
+  </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>
+      Email: <a href="mailto:rittikchatterjee2503@gmail.com">rittikchatterjee2503@gmail.com</a><br>
+      Phone: +91 9382296003<br>
+      <strong>LinkedIn:</strong>
+      <a href="https://www.linkedin.com/in/rittik-chatterjee2534" target="_blank" rel="noopener">
+        <img class="linkedin-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+        View Profile
+      </a>
+    </p>
+    </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Rittik Chatterjee. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
