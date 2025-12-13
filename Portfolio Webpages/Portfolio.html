@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rittik Chatterjee - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #222;
+    }
+    header, footer {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav li {
+      display: inline;
+      margin-right: 15px;
+    }
+    nav a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #0056b3;
+    }
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    h1, h2 {
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-top: 0;
+    }
+    h2 {
+      color: #007bff;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .profile-img {
+      display: block;
+      max-width: 180px;
+      height: auto;
+      border-radius: 16px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      object-fit: cover;
+    }
+    .edu-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    .edu-table th, .edu-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    form input, form textarea, form button {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+    form button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    form button:hover {
+      background: #0056b3;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 15px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      .profile-img {
+        max-width: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Rittik Chatterjee</h1>
+  <nav>
+    <ul>
+      <li><a href="#bio">Bio</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="bio">
+    <h2>About Me</h2>
+    <img src="Rittik.jpg" alt="Rittik Chatterjee" class="profile-img" />
+    <p>
+      I am a Diploma student at Acharyya Prafulla Chandra Ray Polytechnic in Computer Science & Technology. I am a good listener, a team player, and love to communicate and learn new things. My objective is to be a part of an organization where I can use my knowledge for the growth of both the company and myself.
+    </p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <table class="edu-table">
+      <tr>
+        <th>Course</th>
+        <th>Institution</th>
+        <th>Year</th>
+        <th>Percentage / GPA</th>
+      </tr>
+      <tr>
+        <td>Diploma in Computer Science & Technology</td>
+        <td>Acharyya Prafulla Chandra Ray Polytechnic</td>
+        <td>2022-2025</td>
+        <td>GPA 8.8 / 84.2% (Distinction)</td>
+      </tr>
+      <tr>
+        <td>Class XII (WBCHSE)</td>
+        <td>Asansol Old Station High School</td>
+        <td>2019-2021</td>
+        <td>90.6%</td>
+      </tr>
+      <tr>
+        <td>Class X (WBBSE)</td>
+        <td>Boringdanga High School</td>
+        <td>2013-2019</td>
+        <td>91%</td>
+      </tr>
+    </table>
+    <strong>Semesterwise Results:</strong>
+    <ul>
+      <li>6th Sem: GPA 8.7 / 82.7%</li>
+      <li>5th Sem: GPA 9.5 / 89.7%</li>
+      <li>4th Sem: GPA 8.6 / 80.7%</li>
+      <li>3rd Sem: GPA 8.4 / 80.3%</li>
+      <li>2nd Sem: GPA 9.2 / 87.0%</li>
+      <li>1st Sem: GPA 8.5 / 82.4%</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Decent knowledge of C programming</li>
+      <li>Basic concepts of Data Structures</li>
+      <li>Team management</li>
+      <li>Good listening and communication</li>
+      <li>Languages: Bengali (native), Hindi, English</li>
+    </ul>
+    <h3>Positive Skills</h3>
+    <ul>
+      <li>Can adapt in any situation</li>
+      <li>Easily communicate with others</li>
+      <li>Team management skills</li>
+    </ul>
+    <h3>Hobbies</h3>
+    <ul>
+      <li>Writing Poems</li>
+      <li>Reading Books</li>
+      <li>Playing Cricket</li>
+      <li>Playing Card Games</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>
+      Email: <a href="mailto:rittikchatterjee2503@gmail.com">rittikchatterjee2503@gmail.com</a><br>
+      Phone: +91 9382296003<br>
+      Address: Taltore, Jamuria, Asansol, Paschim Bardhaman
+    </p>
+    <form action="https://formsubmit.co/rittikchatterjee2503@gmail.com" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Rittik Chatterjee. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
