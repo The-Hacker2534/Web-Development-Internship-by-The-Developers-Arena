@@ -372,7 +372,6 @@
       <li><a href="#bio">Bio</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#tasks">Tasks</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -383,7 +382,7 @@
   <section id="bio">
     <h2>About Me</h2>
     <div class="headline">
-      Diploma Engineer Trainee at SMS Group India | Human-Machine Interface and Generative AI Applications | Aspiring Web Developer
+     Aspiring Web Developer | Ex Diploma Engineer Trainee at SMS Group India | Human-Machine Interface and Generative AI Applications
     </div>
     <div class="about-row">
       <img src="Rittik.jpg" alt="Rittik Chatterjee" class="profile-img" />
@@ -391,14 +390,6 @@
         <p>
           I am an aspiring web developer and currently a Diploma Engineer Trainee at SMS Group India, specializing in Human-Machine Interface (HMI) and Generative AI applications for industrial automation. I am passionate about technology, team collaboration, and lifelong learning. My objective is to continually advance my skills and contribute meaningfully to organizations and projects focused on digital transformation and innovative solutions.
         </p>
-      </div>
-    </div>
-    <div>
-      <strong>Profile Views Counter (demo):</strong>
-      <div class="counter-box">
-        <button type="button" class="btn" id="decrementBtn">-</button>
-        <span class="counter-value" id="viewCount">0</span>
-        <button type="button" class="btn" id="incrementBtn">+</button>
       </div>
     </div>
   </section>
@@ -412,6 +403,11 @@
         <th>Institution</th>
         <th>Year</th>
         <th>Percentage / GPA</th>
+      </tr>
+      <tr>
+        <td>Pursuing Bachelor in Technology in Computer Science & Technology</td>
+        <td>Jalpaiguri Government Engineering College</td>
+        <td>Present</td>
       </tr>
       <tr>
         <td>Diploma in Computer Science & Technology</td>
@@ -432,15 +428,6 @@
         <td>91%</td>
       </tr>
     </table>
-    <strong>Semesterwise Results:</strong>
-    <ul>
-      <li>6th Sem: GPA 8.7 / 82.7%</li>
-      <li>5th Sem: GPA 9.5 / 89.7%</li>
-      <li>4th Sem: GPA 8.6 / 80.7%</li>
-      <li>3rd Sem: GPA 8.4 / 80.3%</li>
-      <li>2nd Sem: GPA 9.2 / 87.0%</li>
-      <li>1st Sem: GPA 8.5 / 82.4%</li>
-    </ul>
   </section>
 
   <!-- Skills -->
@@ -448,13 +435,15 @@
     <h2>Skills</h2>
     <ul>
       <li>Human-Machine Interface (HMI) development</li>
+      <li>HTML, CSS, Javascript BAsics</li>
       <li>Generative AI applications</li>
+      <li>Prompt Engineering</li>
       <li>Decent knowledge of C programming</li>
       <li>Basic concepts of Data Structures</li>
       <li>Team management and collaboration</li>
       <li>Good communication and listening</li>
-      <li>Languages: Bengali (native), Hindi, English</li>
       <li>Industrial Automation Technology</li>
+      <li>Languages: Bengali (native), Hindi, English</li>
     </ul>
     <h3>Positive Skills</h3>
     <ul>
@@ -464,33 +453,13 @@
     </ul>
     <h3>Hobbies</h3>
     <ul>
-      <li>Writing Poems</li>
+      <li>Writing Poems and Stories</li>
       <li>Reading Books</li>
       <li>Playing Cricket</li>
-      <li>Playing Card Games</li>
+      <li>Learning Guitar</li>
+      <li>Playing Card Tricks</li>
     </ul>
   </section>
-
-  <!-- Week 3 Project: Interactive Task Manager -->
-  <section id="tasks">
-    <h2>Week 3 Project: Task Manager</h2>
-    <p>
-      This interactive task manager lets you add tasks, mark them as complete, and delete them. It demonstrates JavaScript variables, functions, DOM manipulation, and event handling.
-    </p>
-
-    <div class="task-input-row">
-      <input type="text" id="taskInput" placeholder="Enter a new task..." />
-      <button type="button" class="btn" id="addTaskBtn">Add Task</button>
-    </div>
-    <div class="error" id="taskError"></div>
-    <ul class="tasks-list" id="tasksList"></ul>
-    <p class="task-empty" id="emptyState">No tasks yet. Add your first task!</p>
-    <div style="margin-top: 8px;">
-      <button type="button" class="btn" id="clearCompletedBtn">Clear Completed</button>
-      <button type="button" class="btn" id="clearAllBtn">Clear All</button>
-    </div>
-  </section>
-
   <!-- Contact -->
   <section id="contact">
     <h2>Contact Me</h2>
@@ -503,23 +472,6 @@
         View Profile
       </a>
     </p>
-
-    <form id="contactForm" action="https://formsubmit.co/rittikchatterjee2503@gmail.com" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" />
-      <div class="error" id="nameError"></div>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" />
-      <div class="error" id="emailError"></div>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4"></textarea>
-      <div class="error" id="messageError"></div>
-
-      <button type="submit">Send</button>
-      <div id="formFeedback"></div>
-    </form>
   </section>
 </main>
 
@@ -542,107 +494,6 @@
     const darkEnabled = document.body.classList.contains('dark');
     modeToggle.textContent = darkEnabled ? '☀️ Light Mode' : '🌙 Dark Mode';
     localStorage.setItem('theme', darkEnabled ? 'dark' : 'light');
-  });
-
-  // Simple counter demo
-  let counter = 0;
-  const counterSpan = document.getElementById('viewCount');
-  const incrementBtn = document.getElementById('incrementBtn');
-  const decrementBtn = document.getElementById('decrementBtn');
-
-  function updateCounter() {
-    counterSpan.textContent = counter;
-  }
-  incrementBtn.addEventListener('click', () => {
-    counter++;
-    updateCounter();
-  });
-  decrementBtn.addEventListener('click', () => {
-    if (counter > 0) counter--;
-    updateCounter();
-  });
-
-  // Task Manager
-  const taskInput = document.getElementById('taskInput');
-  const addTaskBtn = document.getElementById('addTaskBtn');
-  const tasksList = document.getElementById('tasksList');
-  const taskError = document.getElementById('taskError');
-  const emptyState = document.getElementById('emptyState');
-  const clearCompletedBtn = document.getElementById('clearCompletedBtn');
-  const clearAllBtn = document.getElementById('clearAllBtn');
-
-  function toggleEmptyState() {
-    emptyState.style.display = tasksList.children.length === 0 ? 'block' : 'none';
-  }
-  toggleEmptyState();
-
-  function createTaskItem(text) {
-    const li = document.createElement('li');
-
-    const span = document.createElement('span');
-    span.textContent = text;
-
-    const buttonsDiv = document.createElement('div');
-    buttonsDiv.classList.add('task-buttons');
-
-    const completeBtn = document.createElement('button');
-    completeBtn.textContent = 'Done';
-    completeBtn.className = 'btn';
-    completeBtn.style.padding = '4px 6px';
-
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Delete';
-    deleteBtn.className = 'btn';
-    deleteBtn.style.padding = '4px 6px';
-
-    completeBtn.addEventListener('click', () => {
-      li.classList.toggle('completed');
-    });
-
-    deleteBtn.addEventListener('click', () => {
-      tasksList.removeChild(li);
-      toggleEmptyState();
-    });
-
-    buttonsDiv.appendChild(completeBtn);
-    buttonsDiv.appendChild(deleteBtn);
-
-    li.appendChild(span);
-    li.appendChild(buttonsDiv);
-
-    return li;
-  }
-
-  function addTask() {
-    const value = taskInput.value.trim();
-    taskError.textContent = '';
-    if (!value) {
-      taskError.textContent = 'Please enter a task before adding.';
-      return;
-    }
-    const taskItem = createTaskItem(value);
-    tasksList.appendChild(taskItem);
-    taskInput.value = '';
-    toggleEmptyState();
-  }
-
-  addTaskBtn.addEventListener('click', addTask);
-  taskInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      addTask();
-    }
-  });
-
-  clearCompletedBtn.addEventListener('click', () => {
-    const completed = tasksList.querySelectorAll('.completed');
-    completed.forEach(item => tasksList.removeChild(item));
-    toggleEmptyState();
-  });
-
-  clearAllBtn.addEventListener('click', () => {
-    tasksList.innerHTML = '';
-    toggleEmptyState();
   });
 
   // Contact form validation
@@ -692,3 +543,4 @@
 </script>
 </body>
 </html>
+
